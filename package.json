@@ -1,0 +1,22 @@
+{
+  "name": "waiting_list",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChaCha3088/Waiting-List.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChaCha3088/Waiting-List/issues"
+  },
+  "homepage": "https://github.com/ChaCha3088/Waiting-List#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
