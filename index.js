@@ -1,14 +1,22 @@
 const express = require("express");
-const mainRouter = require('./routes');
+const listRouter = require('./routes/lists');
 const ticketsRouter = require('./routes/tickets');
 const waitingsRouter = require('./routes/waitings');
 
 const app = express();
 
-
 app.use("/waitings", waitingsRouter);
 app.use("/tickets", ticketsRouter);
-app.use("/", mainRouter);
+app.use("/lists", listRouter);
+app.use(express.json());
+
+app.get('/', (req, res) => {
+    //사용자 ID 발급
+    const mkID = Math.floor(Math.random() * 100000);
+    
+    //res.send(`Your ID is ${mkID}`)
+    res.redirect(`/lists/${mkID}`)
+})
 
 app.use((req, res, next) => {
     res.status(404);
