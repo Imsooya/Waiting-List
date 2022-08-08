@@ -43,5 +43,13 @@ exports.countWaitingPeopleAll = () => {
 
 
 
+exports.createWaiting = () => {
+    //대기표 추가 기능
+    //대기표가 이미 존재하는지도 확인할 것
+    return 
+}
+
+
+
 //{}객체
 //[]Array
