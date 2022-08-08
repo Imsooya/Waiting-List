@@ -1,7 +1,7 @@
 const { Router } = require('express');
 const router = Router();
 const path = require('path');
-const waitingLists = require(‘../models/waitingLists’);
+const waitingLists = require('../models/waitingLists');
 
 const WaitingList = require('../models/waitingLists');
 
