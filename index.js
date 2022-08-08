@@ -14,7 +14,6 @@ app.get('/', (req, res) => {
     //사용자 ID 발급
     const mkID = Math.floor(Math.random() * 100000);
     
-    //res.send(`Your ID is ${mkID}`)
     res.redirect(`/lists/${mkID}`)
 })
 

@@ -12,9 +12,13 @@ router.get("/:userID", (req, res) => {
 // router.get("/waitings/:id/lists", );
 // 식당별 대기자 리스트 정보
 
-//대기자 등록
-//대기 등록 버튼을 누르면 그 가게의 id와 userID, 그리고 timestamp를 waitingLists.js에 기록
+
+
+//대기자 등록 기능
+//대기 등록 버튼을 누르면 그 가게의 foodID와 userID, 그리고 Timestamp를 전달받아 waitingLists.js에 기록
 //router.post("/waitings/:userID", );
 //대기 등록 후 userID와 함께 tickets.js로 redirect
+
+//대기자로 이미 등록돼있으면 거절하는 기능도 추가해야함
 
 module.exports = router;

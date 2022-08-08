@@ -2,8 +2,8 @@ const { Router } = require('express');
 const router = Router();
 const path = require('path');
 
-router.get("/:userID", (req, res) => {
-    //userID에 추가적으로 가게 이름도 넘어와야할 듯?
+router.get("/:foodID/:userID", (req, res) => {
+    //foodID와 userID에 가게이름 넘어와야할 듯?
     res.sendFile('tickets.html', { root: path.join(__dirname, '../public') });
 
     //waitingLists.js를 참고하여 가게에 맞는 정보 및 현재대기인원 함수 사용
