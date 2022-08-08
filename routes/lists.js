@@ -13,6 +13,9 @@ router.get("/:userID", (req, res, next) => {
     //식당 리스트 보여주기
     const lists = List.list();
     res.json(lists);
+    //1. 연결방법
+
+
 
     //get 현재 대기인원 보여주기
     //waitingLists.js에 기록된 userID의 개수를 세는 model(현재대기인원 함수) 작성할 것
@@ -22,6 +25,16 @@ router.get("/:userID", (req, res, next) => {
 //메인, 식당 페이지 랜더
 
 //router.get("/lists", );
+//json 응답을 보내줌
+
+//html에서 js로 요청을 보내는 코드를 작성(ajax)
+//json을 받아서 가공하여 페이지에 넣는 코드 또한 작성
+
 //메인, 식당 페이지 정보
 
 module.exports = router;
+
+
+
+
+

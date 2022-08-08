@@ -14,3 +14,9 @@ let waitingLists = [
         "timestamp": 1,
     },
 ];
+
+
+
+
+//{}객체
+//[]Array
