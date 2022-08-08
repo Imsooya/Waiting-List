@@ -34,11 +34,11 @@ exports.countWaitingPeopleAll = () => {
                 'foodID': item['foodID'],
                 'foodName': item['foodName'],
                 'userIDAndTimestamp': item['userIDAndTimestamp'],
-                'userNumber':Object.keys(item['userIDAndTimestamp']).length,
+                'userCount':Object.keys(item['userIDAndTimestamp']).length,
             });
     });
     return Lists;
-    }
+}
 
 
 

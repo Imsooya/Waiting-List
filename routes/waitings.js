@@ -1,9 +1,7 @@
 const { Router } = require('express');
 const router = Router();
 const path = require('path');
-const waitingLists = require('../models/waitingLists');
-
-const WaitingList = require('../models/waitingLists');
+const WaitingLists = require('../models/waitingLists');
 
 router.get("/:foodID/:userID", (req, res, next) => {
     res.sendFile('waitings.html', { root: path.join(__dirname, '../public') });
@@ -17,21 +15,13 @@ router.get("/:foodID/:userID", (req, res, next) => {
 
 
 
-router.get('/debug', (req, res) => {
-    const json = waitingLists.countWaitingPeopleAll();
-    console.log(json);
-    res.json(json);
-    });
-
-
-
 //대기자 등록 기능
 router.post('/:foodID/:userID', (req, res, next) => {
     const foodID = req.params.foodID;
     const userID = req.params.userID;
-    const ticket = WaitingList.createWaiting(foodID, userID);
+    const ticket = WaitingLists.createWaiting(foodID, userID);
     res.json(ticket);
-})
+});
 //대기 등록 버튼을 누르면 그 가게의 foodID와 userID, 그리고 Timestamp를 전달받아 waitingLists.js에 기록
 //router.post("/waitings/:userID", );
 //대기 등록 후 userID와 함께 tickets.js로 redirect

@@ -3,7 +3,7 @@ const { Router } = require('express');
 const router = Router();
 const path = require('path');
 const FoodList = require('../models/foodLists');
-const WaitingList = require('../models/waitingLists');
+const WaitingLists = require('../models/waitingLists');
 
 router.get("/:userID", (req, res, next) => {
     //userID 가져오기
@@ -15,10 +15,11 @@ router.get("/:userID", (req, res, next) => {
     const foodLists = FoodList.list();
 
     //현재 대기인원 보여주기
-    const waitingLists = WaitingList.countWaitingPeopleAll();
+    const waitingLists = WaitingLists.countWaitingPeopleAll();
+    res.json(waitingLists);
 
 
-    
+
     //응답부
     res.json(foodLists, waitingLists);
     //HTML 보내기
