@@ -16,7 +16,6 @@ router.get("/:userID", (req, res, next) => {
 
     //현재 대기인원 보여주기
     const waitingLists = WaitingLists.countWaitingPeopleAll();
-    res.json(waitingLists);
 
 
 
@@ -25,6 +24,8 @@ router.get("/:userID", (req, res, next) => {
     //HTML 보내기
     res.sendFile('index.html', { root: path.join(__dirname, '../public') });
     //json으로 여러개 어케 보냄?
+    res.json(waitingLists);
+
 
 
 
