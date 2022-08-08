@@ -1,6 +1,8 @@
 const { Router } = require('express');
 const router = Router();
 const path = require('path');
+const waitingLists = require(‘../models/waitingLists’);
+
 const WaitingList = require('../models/waitingLists');
 
 router.get("/:foodID/:userID", (req, res, next) => {
@@ -12,6 +14,14 @@ router.get("/:foodID/:userID", (req, res, next) => {
 //식당 별 대기자 리스트 페이지 랜더
 // router.get("/waitings/:id/lists", );
 // 식당별 대기자 리스트 정보
+
+
+
+router.get('/debug', (req, res) => {
+    const json = waitingLists.countWaitingPeopleAll();
+    console.log(json);
+    res.json(json);
+    });
 
 
 

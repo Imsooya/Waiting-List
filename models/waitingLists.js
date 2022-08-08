@@ -27,19 +27,18 @@ let waitingLists = [
 
 
 exports.countWaitingPeopleAll = () => {
-    let userIDAndTimestamps = waitingLists.map(({userIDAndTimestamp}));
-    Object.values('userIDAndTimestamp').length;
-    console.log()
-
-    //
-
-
-    return waitingLists.map(({ foodID, foodName, userIDAndTimestamp }) => ({
-        foodID,
-        foodName,
-        userIDAndTimestamp,
-    }));
-}
+    let Lists=[];
+    waitingLists.map(
+        (item) => {
+            Lists.push({
+                'foodID': item['foodID'],
+                'foodName': item['foodName'],
+                'userIDAndTimestamp': item['userIDAndTimestamp'],
+                'userNumber':Object.keys(item['userIDAndTimestamp']).length,
+            });
+    });
+    return Lists;
+    }
 
 
 
