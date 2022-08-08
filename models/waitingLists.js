@@ -43,9 +43,10 @@ exports.countWaitingPeopleAll = () => {
 
 
 
-exports.createWaiting = () => {
+exports.createWaiting = (foodID, userID) => {
     //대기표 추가 기능
-    //대기표가 이미 존재하는지도 확인할 것
+    //대기표가 이미 존재하는지도 확인하고
+    //waitingLists에 추가하는 함수
     return 
 }
 
